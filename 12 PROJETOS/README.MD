@@ -9,3 +9,7 @@ Simples também mas eu fiz um sistema totalmente aleatório com o random, apesar
 ## Guess The Number(User) ##
 
 Utilizei da base do progama anterior, foram algumas simples alterações...
+
+##  Rock Paper Scissors ##
+
+Esse foi um pouco mais complicado que os anteriores, fiquei por alguns minutos pensando em como fazer o sistema de vitória e pensei em fazer um relação com as somas das opções de seleção, e, funcionou.
