@@ -1,44 +1,55 @@
 from random import randint
 
-def win (p, t):
-    if p == t:
+def winTieOrLose (e1, e2):
+    if e1 == e2:
         print("Empate")
-    elif p+t == 3:
+
+    elif e1 + e2 == 3:
         print("Papel ganhou!")
-    elif p+t == 4:
+
+    elif e1 +e2 == 4:
         print("Pedra ganhou!")
-    elif p+t == 5:
+
+    elif e1 + e2 == 5:
         print("Tesoura ganhou")
 
 
 def UserXUser ():
-    escolha = int(input('''
-        Qual sua Escolha?
-        1 - Pedra
-        2 - Papel
-        3 - Tesoura
-    '''))
+    escolha = 5
+    escolha2 = 5
 
-    escolha2 = int(input('''
-        Qual a Escolha do seu oponente?
-        1 - Pedra
-        2 - Papel
-        3 - Tesoura
-    '''))
+    while not(escolha in [1,2,3]):
+        escolha = int(input('''
+            Qual sua Escolha?
+            1 - Pedra
+            2 - Papel
+            3 - Tesoura
+        '''))
 
-    win(escolha, escolha2)
+    while not(escolha2 in [1,2,3]):
+        escolha2 = int(input('''
+            Qual a Escolha do seu oponente?
+            1 - Pedra
+            2 - Papel
+            3 - Tesoura
+        '''))
+
+    winTieOrLose(escolha, escolha2)
 
 
 def UserxIA () :
-    escolha = int(input('''
-        Qual sua Escolha?
-        1 - Pedra
-        2 - Papel
-        3 - Tesoura
-    '''))
+    escolha = 5
 
-    escolha2 = randint(1, 3)
-    win(escolha, escolha2)
+    while not(escolha in [1,2,3]):
+        escolha = int(input('''
+            Qual sua Escolha?
+            1 - Pedra
+            2 - Papel
+            3 - Tesoura
+        '''))
+
+    winTieOrLose(escolha, randint(1, 3))
+
 
 print("Bem vindo ao Pedra, Papel, Tesoura...")
 while True :
